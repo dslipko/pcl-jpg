@@ -1,7 +1,7 @@
 # pcl-jpg
 Read and process points cloud 3d, export in jpg.
 
-- [ ] open `car.bin`
+- [x] open `car.bin`
 - [ ] export view as `.jpg`
 - [ ] find center of the cloud
 - [ ] transform coordinates 
