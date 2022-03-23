@@ -1,5 +1,6 @@
+#include <pcl/common/centroid.h>
+#include <pcl/io/pcd_io.h>
 #include <pcl/visualization/pcl_visualizer.h>
-
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -43,7 +44,11 @@ int main() {
     file_.read(reinterpret_cast<char *>(&points[i].y), sizeof(float));
     file_.read(reinterpret_cast<char *>(&points[i].z), sizeof(float));
   }
+  Eigen::Vector4f centroid;
+  pcl::compute3DCentroid(points, centroid);
 
+  std::cout << "centroid:" << centroid[0] << " " << centroid[1] << " "
+            << centroid[2] << " " << centroid[3] << " \n";
   pcl::visualization::PCLVisualizer::Ptr viewer;
   viewer = simpleVis(points.makeShared());
   viewer->pcl::visualization::PCLVisualizer::saveScreenshot("filename.png");
