@@ -2,10 +2,10 @@
 Read and process points cloud 3d, export in jpg.
 
 - [x] open `car.bin`
-- [ ] export view as `.jpg`
+- [x] export view as `.png`
 - [ ] find center of the cloud
 - [ ] transform coordinates 
 - [ ] generate 2 different views
-- [ ] export results in  `.jpg`
+- [ ] export results in  `.png`
 - [ ] tidying 
 - [ ] write docs and `readme.md`
