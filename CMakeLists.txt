@@ -25,6 +25,3 @@ if( PCL_FOUND )
   target_link_libraries( pcl-jpg ${PCL_LIBRARIES} )
 endif()
 
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
